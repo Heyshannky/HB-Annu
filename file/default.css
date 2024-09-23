@@ -1,0 +1,113 @@
+/* Ensure the body background image scales correctly */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../img2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: white;
+  overflow: auto;
+}
+
+/* Make sure the main content is responsive */
+#main {
+  width: 100%;
+}
+
+/* Make the wrapper responsive */
+#wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  max-width: 1100px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Handle text area responsiveness */
+#text {
+  width: 90%; /* Adjust to fit smaller screens */
+  max-width: 272px;
+  height: auto;
+  left: 0;
+  right: 0;
+  top: 80px;
+  position: absolute;
+  margin: 0 auto;
+}
+
+/* Canvas should also be responsive */
+#canvas {
+  width: 100%; /* Adjust canvas width to 100% */
+  max-width: 1100px; /* Keep the maximum width */
+  height: auto; /* Let the height adjust automatically */
+  margin: 0 auto;
+}
+
+/* Make the code and other elements responsive */
+#code {
+  display: none;
+  color: rgb(196, 255, 255);
+  font-size: 16px;
+  margin-top: 70px;
+  line-height: 25px;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+#clock-box {
+  position: absolute;
+  left: 60px;
+  top: 550px;
+  font-size: 28px;
+  display: none;
+}
+
+#clock {
+  margin-left: 48px;
+}
+
+#clock .digit {
+  font-size: 64px;
+}
+
+/* Responsive media query for smaller screens */
+@media (max-width: 768px) {
+  #wrap {
+    width: 100%;
+    height: auto;
+  }
+  #text {
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+  #canvas {
+    width: 100%;
+    height: auto;
+  }
+  #clock-box {
+    font-size: 24px;
+  }
+  #clock .digit {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  #text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  #clock-box {
+    font-size: 18px;
+  }
+  #clock .digit {
+    font-size: 36px;
+  }
+}
